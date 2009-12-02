@@ -1,0 +1,10 @@
+Changelog
+=========
+
+0.1b
+----------------
+
+* Initial release
+* using ui.multiselect.js [mathias.leimgruber]
+* small plone integration js [mathias.leimgruber]
+* manipulate DOM for a better handling [mathias.leimgruber]

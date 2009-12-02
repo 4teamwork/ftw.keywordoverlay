@@ -1,0 +1,26 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ftw.keywordoverlay">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include package="collective.js.jquery" />
+    <include package="collective.js.jqueryui" />
+    
+    <genericsetup:registerProfile
+        name="default"
+        title="ftw.keywordoverlay"
+        directory="profiles/default"
+        description="jquery keyword overlay for keywordwidgets"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <browser:resourceDirectory
+        name="ftw.keywordoverlay-resources"
+        directory="resources" />
+
+</configure>
