@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1b'
+version = '0.1a'
 
 setup(name='ftw.keywordoverlay',
       version=version,

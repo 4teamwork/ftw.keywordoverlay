@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1b
+0.1a
 ----------------
 
 * Initial release
