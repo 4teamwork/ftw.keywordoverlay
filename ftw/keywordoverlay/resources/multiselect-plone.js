@@ -11,14 +11,15 @@ jq(function(){
         //load widget while clicking on formTab
         $loadon.bind('click', function(e){
             $target.css('width','500px');
-            $target.multiselect({sortable: false});
-            
             //move the keyword add area below the new widget
             var $addarea = $target.parent().prev();
             var content = $addarea.html();
             $addarea.remove();
             content = '<div>'+content+'</div>';
             $target.closest('div').after(content);
+            
+            //load widget
+            $target.multiselect({sortable: false});
         });
     });
 
