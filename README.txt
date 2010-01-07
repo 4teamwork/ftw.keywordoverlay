@@ -4,11 +4,15 @@ Introduction
 This package is useing jquery muliselect plugin to make a nicer 
 keywordWidget for Plone. It depends on jquery and jquery.ui. 
 
-No chnages are made on the KeywordWidget itself!
+No changes are made on the KeywordWidget itself!
 
-ftw.keywordoverlay is only testet with the default (only one) 
-Keywordwidget from plone, but it may work with other keywordFields or 
-multible keywordfields on one content type.
+Cool:
+ftw.keywordoverlay works with multiple keywordWidgets. 
+
+
+Limitation:
+500 keywords are too much, for example FF will raise an error
+(lots of DOM manipulation).  
 
 
 Copyright and credits
