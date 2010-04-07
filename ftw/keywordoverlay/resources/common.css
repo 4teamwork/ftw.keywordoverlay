@@ -6,3 +6,20 @@
 }
 
 form {margin: 0; padding: 0;}
+
+.new_item_space { 
+    margin-left:0em;
+}
+
+ul.new_item_space li { 
+    display:table;
+    padding:0.3em;
+}
+ul.new_item_space li span {
+    margin-left:1em;
+}
+
+.delbutton img {
+    width:10px;
+    margin-right:1em;
+}

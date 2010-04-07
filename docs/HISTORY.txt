@@ -1,8 +1,21 @@
 Changelog
 =========
 
+0.2
+---
+* some CSS [mathias.leimgruber]
+* merged some other important bugfixes from the newest ui.multiselect widget
+  [mathias.leimgruber]
+* fix "add all", "remove all" function from ui.multiselect [mathias.leimgruber]
+* works only with jquery 1.3.x and jquery.ui 1.7.*
+
+0.1
+---
+* ftw.keywordoverlay works now with multiple keywordwidgets [mathias.leimgruber]
+
+
 0.1a
-----------------
+----
 
 * Initial release
 * using ui.multiselect.js [mathias.leimgruber]

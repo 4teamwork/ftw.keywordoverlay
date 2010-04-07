@@ -34,7 +34,7 @@ jq(function(){
             item.val('');
             if (itemval){
                 var delbutton = '<a class="delbutton" href="#"><img src="'+portal_url+'/delete_icon.gif" /></a>';
-                var toadd = '<li><span>'+itemval+'</span> '+delbutton+'</li>'
+                var toadd = '<li class="ui-state-default ui-element"><span>'+itemval+'</span> '+delbutton+'</li>'
                 //add to the visible part
                 jq(this).parent().prev().append(toadd);
                 //add item to the hidden area (for plone)

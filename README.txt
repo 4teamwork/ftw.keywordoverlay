@@ -1,7 +1,7 @@
 Introduction
 ============
 
-This package is useing jquery muliselect plugin to make a nicer 
+This package is using jquery muliselect plugin to make a nicer 
 keywordWidget for Plone. It depends on jquery and jquery.ui. 
 
 No changes are made on the KeywordWidget itself!
@@ -12,7 +12,19 @@ ftw.keywordoverlay works with multiple keywordWidgets.
 
 Limitation:
 500 keywords are too much, for example FF will raise an error
-(lots of DOM manipulation).  
+(a lot of DOM manipulation).  
+
+
+INSTALL
+-------
+just add ftw.keywordoverlay to yout eggs and zcml section in your buildout
+
+
+DEPENDENCIES
+------------
+v 0.2 depends on jquery 1.3.x and jquery.ui 1.7.x, jquery 1.4.x is currently
+not supported 
+
 
 
 Copyright and credits
