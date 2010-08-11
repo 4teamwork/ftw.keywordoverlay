@@ -1,7 +1,6 @@
 //plone integration of ui.multiselectwidget
 jq(function(){
     //get all keywordwidgets
-    console.info('blubb');
     var $targets = jq('.field.ArchetypesKeywordWidget select');
     //bind click event on every fieldset that contains an keywordwidget
     $targets.each(function(i,o){
@@ -12,7 +11,7 @@ jq(function(){
         //load widget while clicking on formTab
         $loadon.bind('click', function(e){
             $target.css('width','500px');
-            
+
             //load widget
             $target.multiselect({sortable: false});
         });
