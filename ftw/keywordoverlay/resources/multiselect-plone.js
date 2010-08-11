@@ -1,7 +1,8 @@
 //plone integration of ui.multiselectwidget
 jq(function(){
     //get all keywordwidgets
-    var $targets = jq('.field.ArchetypesKeywordWidget select[id$=existing_keywords]');
+    console.info('blubb');
+    var $targets = jq('.field.ArchetypesKeywordWidget select');
     //bind click event on every fieldset that contains an keywordwidget
     $targets.each(function(i,o){
         $target = jq(o);

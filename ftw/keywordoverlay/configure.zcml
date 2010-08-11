@@ -8,7 +8,6 @@
 
     <five:registerPackage package="." initialize=".initialize" />
 
-    <include package="collective.js.jquery" />
     <include package="collective.js.jqueryui" />
     
     <genericsetup:registerProfile

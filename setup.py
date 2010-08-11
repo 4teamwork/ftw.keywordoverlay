@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.2'
+version = open('ftw/keywordoverlay/version.txt').read().strip()
 
 setup(name='ftw.keywordoverlay',
       version=version,
@@ -25,7 +25,6 @@ setup(name='ftw.keywordoverlay',
       install_requires=[
           'setuptools',
           'collective.js.jqueryui',
-          'collective.js.jquery',
       ],
       entry_points="""
       # -*- Entry points: -*-
