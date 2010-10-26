@@ -1,6 +1,10 @@
 Changelog
 =========
 
+
+1.1
+---
+
 1.0
 ---
 * Plone 4 release - works only with plone 4. 
