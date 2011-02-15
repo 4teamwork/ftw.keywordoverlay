@@ -10,7 +10,7 @@ jq(function(){
         $loadon = jq('ul.formTabs li.formTab [href$='+loadonID+']');
         //load widget while clicking on formTab
         $loadon.bind('click', function(e){
-            $target.css('width','500px');
+            $target.css('width','90%');
 
             //load widget
             $target.multiselect({sortable: false});
