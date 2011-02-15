@@ -22,7 +22,7 @@ jq(function(){
         
         //area for new items
         var content  = '<div><ul class="new_item_space"></ul>';
-        content += '<form>Add new item <input class="item" name="new_item" type="text" /><input class="allowMultiSubmit" type="submit" value="+"></form></div>';
+        content += '<form><input class="item" name="new_item" type="text" /><input class="allowMultiSubmit" type="submit" value="+"></form></div>';
         var $selected = $target.closest('div');
         $selected.after(content);
         //add eventhandler to add and delete items
