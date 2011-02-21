@@ -4,16 +4,20 @@ Changelog
 
 1.1
 ---
-* Added German translations for ui.multiselect.js. 
+
+* Exprted jquery.multiselect to collective.js.ui.multiselect
+  [21.02.2011, elio.schmutz]
+
+* Added German translations for ui.multiselect.js.
   [15.02.2011, mathias.leimgruber]
 
 
 1.0
 ---
-* Plone 4 release - works only with plone 4. 
+* Plone 4 release - works only with plone 4.
   Use the newest ui.multiselect.js from http://github.com/michael/multiselect/blob/master/js/ui.multiselect.js
   Depends on jquery 1.4.x and jquery.ui 1.8.x
-  Removed dependency for collective.js.jquery, 
+  Removed dependency for collective.js.jquery,
   [11.08.2010, mathias.leimgruber]
 
 0.2

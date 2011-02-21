@@ -25,6 +25,7 @@ setup(name='ftw.keywordoverlay',
       install_requires=[
           'setuptools',
           'collective.js.jqueryui',
+          'collective.js.ui.multiselect',
       ],
       entry_points="""
       # -*- Entry points: -*-
