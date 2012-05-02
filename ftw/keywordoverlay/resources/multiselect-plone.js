@@ -19,7 +19,9 @@ jq(function(){
         //hide plones default add textarea
         var $addarea = $target.parent().prev();
         $addarea.hide();
-        
+        //hide plone 4 add area
+        $targets.parents('div.field').find('#newTags').hide();
+
         //area for new items
         var content  = '<div><ul class="new_item_space"></ul>';
         content += '<form><input class="item" name="new_item" type="text" /><input class="allowMultiSubmit" type="submit" value="+"></form></div>';
