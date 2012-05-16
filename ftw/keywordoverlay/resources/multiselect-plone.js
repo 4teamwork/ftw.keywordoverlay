@@ -1,58 +1,62 @@
 //plone integration of ui.multiselectwidget
-jq(function(){
+jq(function() {
     //get all keywordwidgets
-    var $targets = jq('.field.ArchetypesKeywordWidget select');
+    var $targets = jq('.field.ArchetypesKeywordWidget');
     //bind click event on every fieldset that contains an keywordwidget
-    $targets.each(function(i,o){
+    $targets.each(function(i, o) {
         $target = jq(o);
         //get id and cut off <fieldset->
         var loadonID = $target.closest('fieldset').attr('id').substr(9);
-        $loadon = jq('ul.formTabs li.formTab [href$='+loadonID+']');
+        $loadon = jq('ul.formTabs li.formTab [href$=' + loadonID + ']');
         //load widget while clicking on formTab
-        $loadon.bind('click', function(e){
-            $target.css('width','90%');
+        $loadon.bind('click', function(e) {
+            $select = $target.find('select:first');
+            $select.css('width', '90%');
 
             //load widget
-            $target.multiselect({sortable: false});
+            $select.multiselect({
+                sortable: false
+            });
         });
 
         //hide plones default add textarea
-        var $addarea = $target.parent().prev();
+        // Cut of "archetypes-fieldname-" for field id
+        var field_id = $target.attr('id').substr(21);
+        var $addarea = $target.find('#' + field_id + '_keywords');
         $addarea.hide();
+        $addarea.closest('dl').find('.formHelp').hide();
         //hide plone 4 add area
-        $targets.parents('div.field').find('#newTags').hide();
-
         //area for new items
-        var content  = '<div><ul class="new_item_space"></ul>';
+        var content = '<div><ul class="new_item_space"></ul>';
         content += '<form><input class="item" name="new_item" type="text" /><input class="allowMultiSubmit" type="submit" value="+"></form></div>';
         var $selected = $target.closest('div');
         $selected.after(content);
         //add eventhandler to add and delete items
         $field = $selected.parent();
-        $field.find('.allowMultiSubmit').bind('click', function(e){
+        $field.find('.allowMultiSubmit').bind('click', function(e) {
             e.preventDefault();
             var item = jq(this).prev();
             var itemval = item.val()
             item.val('');
-            if (itemval){
-                var delbutton = '<a class="delbutton" href="#"><img src="'+portal_url+'/delete_icon.gif" /></a>';
-                var toadd = '<li class="ui-state-default ui-element"><span>'+itemval+'</span> '+delbutton+'</li>'
+            if (itemval) {
+                var delbutton = '<a class="delbutton" href="#"><img src="' + portal_url + '/delete_icon.gif" /></a>';
+                var toadd = '<li class="ui-state-default ui-element"><span>' + itemval + '</span> ' + delbutton + '</li>'
                 //add to the visible part
                 jq(this).parent().prev().append(toadd);
                 //add item to the hidden area (for plone)
-                $addarea.contents('textarea').append(itemval+'\n');   
+                $addarea.append(itemval + '\n');
             }
         });
 
         //delete function
-        jq('.delbutton').live('click',function(e){
+        jq('.delbutton').live('click', function(e) {
             e.preventDefault();
             var $this = jq(this)
             var $parent = $this.parent();
             var itemval = $this.prev().html();
             $addarea = jq($this.closest('.ArchetypesKeywordWidget').find('[id$=_keywords]').eq(0));
             var value = $addarea.html();
-            value = value.replace(itemval+'\n','');
+            value = value.replace(itemval + '\n', '');
             $addarea.html(value);
             $parent.remove();
         });
@@ -60,10 +64,10 @@ jq(function(){
 
 
         //load if allready visible
-        if ($target.is(':visible')){
+        if ($target.is(':visible')) {
             $loadon.trigger('click');
         }
-        
+
     });
 
 });
