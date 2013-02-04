@@ -1,13 +1,13 @@
 //plone integration of ui.multiselectwidget
-jq(function() {
+jQuery(function($) {
     //get all keywordwidgets
-    var $targets = jq('.field.ArchetypesKeywordWidget');
+    var $targets = $('.field.ArchetypesKeywordWidget');
     //bind click event on every fieldset that contains an keywordwidget
     $targets.each(function(i, o) {
-        $target = jq(o);
+        $target = $(o);
         //get id and cut off <fieldset->
         var loadonID = $target.closest('fieldset').attr('id').substr(9);
-        $loadon = jq('ul.formTabs li.formTab [href$=' + loadonID + ']');
+        $loadon = $('ul.formTabs li.formTab [href$=' + loadonID + ']');
         //load widget while clicking on formTab
         $loadon.bind('click', function(e) {
             $select = $target.find('select:first');
@@ -35,26 +35,26 @@ jq(function() {
         $field = $selected.parent();
         $field.find('.allowMultiSubmit').bind('click', function(e) {
             e.preventDefault();
-            var item = jq(this).prev();
-            var itemval = item.val()
+            var item = $(this).prev();
+            var itemval = item.val();
             item.val('');
             if (itemval) {
                 var delbutton = '<a class="delbutton" href="#"><img src="' + portal_url + '/delete_icon.gif" /></a>';
-                var toadd = '<li class="ui-state-default ui-element"><span>' + itemval + '</span> ' + delbutton + '</li>'
+                var toadd = '<li class="ui-state-default ui-element"><span>' + itemval + '</span> ' + delbutton + '</li>';
                 //add to the visible part
-                jq(this).parent().prev().append(toadd);
+                $(this).parent().prev().append(toadd);
                 //add item to the hidden area (for plone)
                 $addarea.append(itemval + '\n');
             }
         });
 
         //delete function
-        jq('.delbutton').live('click', function(e) {
+        $('.delbutton').live('click', function(e) {
             e.preventDefault();
-            var $this = jq(this)
+            var $this = $(this);
             var $parent = $this.parent();
             var itemval = $this.prev().html();
-            $addarea = jq($this.closest('.ArchetypesKeywordWidget').find('[id$=_keywords]').eq(0));
+            $addarea = $($this.closest('.ArchetypesKeywordWidget').find('[id$=_keywords]').eq(0));
             var value = $addarea.html();
             value = value.replace(itemval + '\n', '');
             $addarea.html(value);
