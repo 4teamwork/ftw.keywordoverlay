@@ -36,11 +36,11 @@ $(function() {
         $field.find('.allowMultiSubmit').bind('click', function(e) {
             e.preventDefault();
             var item = $(this).prev();
-            var itemval = item.val()
+            var itemval = item.val();
             item.val('');
             if (itemval) {
                 var delbutton = '<a class="delbutton" href="#"><img src="' + portal_url + '/delete_icon.gif" /></a>';
-                var toadd = '<li class="ui-state-default ui-element"><span>' + itemval + '</span> ' + delbutton + '</li>'
+                var toadd = '<li class="ui-state-default ui-element"><span>' + itemval + '</span> ' + delbutton + '</li>';
                 //add to the visible part
                 $(this).parent().prev().append(toadd);
                 //add item to the hidden area (for plone)
@@ -51,7 +51,7 @@ $(function() {
         //delete function
         $('.delbutton').live('click', function(e) {
             e.preventDefault();
-            var $this = $(this)
+            var $this = $(this);
             var $parent = $this.parent();
             var itemval = $this.prev().html();
             $addarea = $($this.closest('.ArchetypesKeywordWidget').find('[id$=_keywords]').eq(0));
