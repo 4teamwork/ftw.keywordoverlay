@@ -1,5 +1,5 @@
 //plone integration of ui.multiselectwidget
-$(function() {
+jQuery(function($) {
     //get all keywordwidgets
     var $targets = $('.field.ArchetypesKeywordWidget');
     //bind click event on every fieldset that contains an keywordwidget
