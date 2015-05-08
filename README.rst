@@ -43,9 +43,9 @@ not supported
 Links
 -----
 
-- Main github project repository: https://github.com/4teamwork/ftw.keywordoverlay
-- Issue tracker: https://github.com/4teamwork/ftw.keywordoverlay/issues
-- Package on pypi: http://pypi.python.org/pypi/ftw.keywordoverlay
+- Github: https://github.com/4teamwork/ftw.keywordoverlay
+- Issues: https://github.com/4teamwork/ftw.keywordoverlay/issues
+- Pypi: http://pypi.python.org/pypi/ftw.keywordoverlay
 
 
 Copyright
